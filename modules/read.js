@@ -1,7 +1,8 @@
 import { readFile, writeFile } from "node:fs";
 
 function read(cb) {
-    readFile('C:\\JSProjects\\SchoolManagerCRUD\\DB\\DB.txt', 'utf8', (err, data) => {
+    const filePath = 'C:\\JSProjects\\SchoolManagerCRUD\\DB\\DB.txt';
+    readFile(filePath, 'utf8', (err, data) => {
         if (err) {
             cb(err, null);
         } else {
