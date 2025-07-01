@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Alice Johnson",
+    "age": 14,
+    "grade": 9,
+    "email": "alice.johnson@email.com"
+  },
+  {
+    "id": 2,
+    "name": "Brian Smith",
+    "age": 15,
+    "grade": 10,
+    "email": "brian.smith@email.com"
+  },
+  {
+    "id": 3,
+    "name": "Carla Gomez",
+    "age": 13,
+    "grade": 8,
+    "email": "carla.gomez@email.com"
+  },
+  {
+    "id": 4,
+    "name": "David Lee",
+    "age": 16,
+    "grade": 11,
+    "email": "david.lee@email.com"
+  },
+  {
+    "id": 5,
+    "name": "Emma Brown",
+    "age": 17,
+    "grade": 12,
+    "email": "emma.brown@email.com"
+  }
+]
