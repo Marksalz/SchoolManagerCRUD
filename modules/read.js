@@ -1,3 +1,13 @@
+/**
+ * read.js
+ * -------
+ * Provides the `read` function to fetch all student records from the database.
+ * Reads the DB file and parses the JSON array.
+ * 
+ * Usage:
+ *   read(callback)
+ *     - callback: function(err, studentsArray)
+ */
 import { readFile, writeFile } from "node:fs";
 
 export function read(cb) {

@@ -1,3 +1,14 @@
+/**
+ * create.js
+ * ---------
+ * Provides the `create` function to add a new student record to the database.
+ * Reads the current DB, assigns a new unique Id, and writes the updated array back.
+ * 
+ * Usage:
+ *   create(studentObject, callback)
+ *     - studentObject: { Name, Age, Grade }
+ *     - callback: function(err, createdStudent)
+ */
 import { readFile, writeFile } from "node:fs";
 
 export function create(student, cb) {

@@ -1,3 +1,14 @@
+/**
+ * delete.js
+ * ---------
+ * Provides the `delete_s` function to remove a student record by Id.
+ * Reads the DB, removes the student if found, and writes the updated array back.
+ * 
+ * Usage:
+ *   delete_s(id) -> Promise
+ *     - id: string (student Id)
+ *     - Resolves on success, rejects if Id not found or on error.
+ */
 import { readFilePromise, writeFilePromise } from "./fileHelpers.js";
 
 export function delete_s(id) {

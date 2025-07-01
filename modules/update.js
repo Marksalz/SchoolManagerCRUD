@@ -1,3 +1,14 @@
+/**
+ * update.js
+ * ---------
+ * Provides the `update` function to modify fields of a student record by Id.
+ * Reads the DB, updates the specified fields, and writes the updated array back.
+ * 
+ * Usage:
+ *   update(id, newData) -> Promise<updatedStudent>
+ *     - id: string (student Id)
+ *     - newData: object with fields to update (excluding Id)
+ */
 import { readFilePromise, writeFilePromise } from "./fileHelpers.js";
 
 export function update(id, newData) {
