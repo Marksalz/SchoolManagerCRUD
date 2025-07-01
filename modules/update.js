@@ -11,12 +11,13 @@ export function update(id, newData) {
             }
             const student = dataArray[index];
             for (let key in newData) {
-                if (key !== "Id" ) {
+                if (key !== "Id") {
                     student[key] = newData[key];
                 }
             }
             dataArray[index] = student;
-            return writeFilePromise(filePath, JSON.stringify(dataArray, null, 2)).then(() => student);
+            return writeFilePromise(filePath, JSON.stringify(dataArray, null, 2))
+                .then(() => student);
         })
         .catch(err => {
             throw new Error("Error updating student: " + err.message);

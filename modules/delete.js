@@ -1,4 +1,3 @@
-import { readFile, writeFile } from "node:fs";
 import { readFilePromise, writeFilePromise } from "./fileHelpers.js";
 
 export function delete_s(id) {
@@ -6,7 +5,7 @@ export function delete_s(id) {
     return readFilePromise(filePath)
         .then((data) => {
             let arrayData = JSON.parse(data);
-            const index = arrayData.findIndex(item => item.Id === id);
+            const index = arrayData.findIndex(student => student.Id === id);
             if (index !== -1) {
                 arrayData.splice(index, 1);
             }

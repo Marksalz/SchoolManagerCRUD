@@ -14,7 +14,10 @@ export function create(student, cb) {
             }
             let maxId = 0;
             if (dataArray.length > 0) {
-                maxId = Math.max(...dataArray.map(s => parseInt(s.Id, 10) || 0));
+                maxId = dataArray.reduce((max, s) => {
+                    const id = parseInt(s.Id, 10) || 0;
+                    return id > max ? id : max;
+                }, 0);
             }
             student.Id = String(maxId + 1);
             dataArray.push(student);

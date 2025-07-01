@@ -23,7 +23,7 @@ function handleMenu(choice) {
     switch (choice.trim()) {
         case "1":
         case "create":
-            rl.question('Enter student as JSON (e.g. {"Name":"Ali","Age":20,"Grade":"A"}): ', input => {
+            rl.question('Enter student as JSON (e.g. {"Name":"Ali","Age":20,"Grade":"100"}): ', input => {
                 let student;
                 try {
                     student = JSON.parse(input);
