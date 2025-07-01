@@ -1,6 +1,6 @@
 import { readFile, writeFile } from "node:fs";
 
-function read(cb) {
+export function read(cb) {
     const filePath = 'C:\\JSProjects\\SchoolManagerCRUD\\DB\\DB.txt';
     readFile(filePath, 'utf8', (err, data) => {
         if (err) {
@@ -11,8 +11,3 @@ function read(cb) {
         }
     });
 }
-
-// read((err, students) => {
-//     if (err) console.error(err);
-//     else console.log(students);
-// });
