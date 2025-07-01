@@ -22,9 +22,3 @@ export function update(id, newData) {
             throw new Error("Error updating student: " + err.message);
         });
 }
-
-// Example usage:
-update("1", { Name: "Updated Name" })
-    .then(student => console.log("Updated student:", student))
-    .catch(err => console.error(err));
-
