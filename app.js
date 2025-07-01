@@ -1,3 +1,19 @@
+/**
+ * SchoolManagerCRUD - Main Application
+ * ------------------------------------
+ * This is a command-line CRUD (Create, Read, Update, Delete) application for managing student records.
+ * Data is stored in a JSON file (DB.txt). The user can add, view, update, and delete students.
+ *
+ * Usage:
+ *   - Run the app with Node.js: `node app.js`
+ *   - Follow the menu prompts to perform operations.
+ *
+ * Modules:
+ *   - create: Add a new student
+ *   - read: List all students
+ *   - update: Update student fields by Id
+ *   - delete: Remove a student by Id
+ */
 import readline from "node:readline";
 import { create } from "./modules/create.js";
 import { update } from "./modules/update.js";
@@ -23,7 +39,7 @@ function handleMenu(choice) {
     switch (choice.trim()) {
         case "1":
         case "create":
-            rl.question('Enter student as JSON (e.g. {"Name":"Ali","Age":20,"Grade":"A"}): ', input => {
+            rl.question('Enter student as JSON (e.g. {"Name":"Ali","Age":20,"Grade":"100"}): ', input => {
                 let student;
                 try {
                     student = JSON.parse(input);

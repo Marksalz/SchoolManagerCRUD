@@ -1,3 +1,14 @@
+/**
+ * create.js
+ * ---------
+ * Provides the `create` function to add a new student record to the database.
+ * Reads the current DB, assigns a new unique Id, and writes the updated array back.
+ * 
+ * Usage:
+ *   create(studentObject, callback)
+ *     - studentObject: { Name, Age, Grade }
+ *     - callback: function(err, createdStudent)
+ */
 import { readFile, writeFile } from "node:fs";
 
 export function create(student, cb) {
@@ -14,7 +25,10 @@ export function create(student, cb) {
             }
             let maxId = 0;
             if (dataArray.length > 0) {
-                maxId = Math.max(...dataArray.map(s => parseInt(s.Id, 10) || 0));
+                maxId = dataArray.reduce((max, s) => {
+                    const id = parseInt(s.Id, 10) || 0;
+                    return id > max ? id : max;
+                }, 0);
             }
             student.Id = String(maxId + 1);
             dataArray.push(student);
